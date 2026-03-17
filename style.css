@@ -1,3 +1,6 @@
+
+Copy
+
 * {
   margin: 0;
   padding: 0;
@@ -16,9 +19,10 @@ nav {
   border-bottom: 1px solid #ddd;
   top: 0;
   z-index: 1;
+  justify-content: space-between;
 }
-.brand {
-  font-size: 1.1rem;
+.nav-logo {
+  font-size: 1.5rem;
   font-weight: 700;
   color: #7a1a1a;
   margin-right: 60px;
@@ -174,16 +178,17 @@ nav {
 }
 .content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 40px;
   align-items: center;
+  margin: 0 7% 0 7%;
 }
 .text {
   background: #e8dcc8;
   border-radius: 30px;
   padding: 40px 50px;
   flex: 1;
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   line-height: 1.8;
   text-align: center;
   color: #7a1a1a;
@@ -225,7 +230,7 @@ iframe {
 .timeline-item {
   border: 1px solid #b8a090;
   padding: 16px 20px;
-  font-size: 0.98rem;
+  font-size: 1.15rem;
   line-height: 1.7;
   color: #3a1a1a;
   background: #faf5ee;
@@ -240,4 +245,143 @@ footer {
   font-size: 0.95rem;
   color: #7a1a1a;
   font-weight: 600;
+}
+/* druzyny*/
+.page-title {
+  background: #f5ece0;
+  text-align: center;
+  padding: 50px 60px 40px;
+  border-bottom: 2px solid #c8a878;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.conferences {
+  padding: 60px 80px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+.conference-header {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 20px 40px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+.conference-afc .conference-header {
+  background: #1a3a6b;
+}
+.conference-nfc .conference-header {
+  background: #7a1a1a;
+}
+.division {
+  margin-bottom: 40px;
+}
+.division-header {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  margin-bottom: 16px;
+  background: #ede5d8;
+  color: #3a1a1a;
+  border-left: 5px solid #b8a090;
+}
+.conference-afc .division-header {
+  border-left-color: #1a3a6b;
+}
+.conference-nfc .division-header {
+  border-left-color: #7a1a1a;
+}
+.teams-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.team-card {
+  display: flex;
+  border: 1px solid #b8a090;
+  background: #faf5ee;
+  overflow: hidden;
+}
+.team-photo {
+  width: 150px;
+  min-height: 200px;
+  background: #c8b8a0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  color: #7a5a3a;
+  font-style: italic;
+  text-align: center;
+  padding: 10px;
+  border-right: 1px solid #b8a090;
+}
+.team-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.team-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 11px 16px;
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+}
+.conference-afc .team-name {
+  background: #1a3a6b;
+}
+.conference-nfc .team-name {
+  background: #7a1a1a;
+}
+.players {
+  list-style: none;
+  padding: 8px 0;
+}
+.players li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 3px 14px;
+  font-size: .95rem;
+  color: #3a1a1a;
+  border-bottom: 1px solid #ede5d8;
+  line-height: 1.6;
+}
+.players li:last-child {
+  border-bottom: none;
+}
+.pos {
+  font-size: .72rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 1px 5px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  letter-spacing: .04em;
+}
+.conference-afc .pos {
+  background: #1a3a6b;
+}
+.conference-nfc .pos {
+  background: #7a1a1a;
+}
+@media (max-width: 900px) {
+  .conferences {
+    padding: 30px 20px 60px;
+  }
+  .teams-grid {
+    grid-template-columns: 1fr;
+  }
+  .page-title {
+    font-size: 2rem;
+    padding: 30px 20px;
+  }
 }
